@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #dedede;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body h1 {
+    font-family: 'Tektur', cursive;
+    color:  #590174;
+    margin-bottom: 20px;
+    font-size: 43px;
+    font-weight: bold;
+}
+
+body h1.vermelho {
+    color: red;
+}
+
+#container {
+    background-color: #590174;
+    width: 350px;
+    border-radius: 5px;
+    border: 1px solid #999;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+#container .ajustes {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#container #barraBorda {
+    height: 20px;
+    width: 100%;
+    border: 1px solid #999;
+} 
+
+#container #barraProgresso {
+    height: 18px;
+    width: 0%;
+    background-color: #26da26;
+    border: #999;
+} 
+
+#container h1 {
+    display: flex;
+    align-items: top;
+    gap: 10px;
+    font-size: 55px;
+    color: white;
+}
+
+#container h1 span {
+    font-family: 'Tektur', cursive;
+    font-weight: 500;
+    color: white;
+}
+
+#container #acao {
+    width: 100%;
+    border-radius: 5px;
+    background-color: #26da26;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    height: 46px;
+    border: 0;
+    cursor: pointer;
+}
+
+#container #acao[estado="i"] {
+    background-color: #26da26;
+}
+
+#container #acao[estado="p"] {
+    background-color: #d12626;
+}
+
+#container #acao[estado="c"] {
+    background-color: #a926d1;
+}
+
+#legenda {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+#btnFecharConfig {
+    cursor: pointer;
+    fill: white;
+}
+
+#btnFecharConfig:hover {
+    fill: #a926d1;
+}
+
+#btnConfig {
+    cursor: pointer;
+    fill: white;
+}
+
+#btnConfig:hover {
+    fill: #a926d1;
+}
+
+#modalConfig {
+    height: 150px;
+    width: 500px;
+    position: fixed;
+    top: 60%;
+    left: calc(50% - 250px);
+    border-radius: 10px;
+    background-color: #590174;
+    padding: 16px;
+    transform: translateY(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition-duration: 200ms;
+    transition-delay: 200ms;
+}
+
+#modalConfig.active {
+    top: 50%;
+    opacity: 1;
+    visibility: visible;
+}
+
+#modalConfig h3 {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#modalConfig .setup {
+    margin-top: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#modalConfig .setup input {
+    width: calc(33% - 8px);
+    height: 40px;
+    padding-left: 8px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #b6b5b5;
+    transition-duration: 200ms;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#overlay.active {
+    opacity: .85;
+    visibility: visible;
+}
+

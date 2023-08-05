@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+</head>
+<body>
+
+    <h1 id="titulo">Pomodoro Timer</h1>
+    
+    <div id="container">
+        <div class="ajustes">
+            <div id="barraBorda">
+                <div id="barraProgresso"></div>
+            </div>
+            <box-icon id="btnConfig" name='slider'></box-icon>
+        </div>
+        <h1>
+            <span id="hora">00</span> :
+            <span id="minuto">00</span> :
+            <span id="segundo">00</span>
+        </h1>
+        <button id="acao" estado="i">INICIAR</button>
+
+        <div id="legenda">
+            <span id="pt">P: 0s</span><span id="st">SP: 0s</span><span id="lt">LP: 0s</span>
+        </div>
+    </div>
+
+    <section id="overlay"></section>
+
+    <section id="modalConfig" class="modal">
+        <h3>Configurações do timer <box-icon id="btnFecharConfig" name='x'></box-icon></h3>
+        <div class="setup">
+            <input type="number" id="pomodoroTime" min="0" placeholder="Pomodoro" >
+            <input type="number" id="shortPauseTime" min="0" placeholder="Short Pause" >
+            <input type="number" id="longPauseTime" min="0" placeholder="Long Pause" >
+        </div>
+    </section>
+    
+    
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html
